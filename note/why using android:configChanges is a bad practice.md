@@ -30,10 +30,8 @@ public void onConfigurationChanged(Configuration newConfig) {
 ## https://stackoverflow.com/a/37794947
 To sum up all what i got form @user13 answer and other stackoverflow questions and blog posts i would like to share my finding to clear some very important aspects.
 
-(user13) It's not bad practice to use android:configChanges, but it pretty easily can be, if you don't understand exactly what you're doing
-
-Using this technique prevents you from easily using configuration specific resources. For instance, if you want your layout or drawables or strings or whatever to be different in portrait and landscapes, you have to manage it yourself if you use android:configChanges.
-
-You need to override and use onConfigurationChanged() method to perform specific action if you decide to use android:configChanges
-As user13 mentioned Activity is recreated not just due to orientation change but there are multiple reasons due to which activity can be restarted. Therefor activity restart should be handled for all causes. using android:configChanges only handles one case and there will be unhandled cases of activity restart which will cause a potential bug.
-There are multiple and better ways to handle activity restart and plenty of help is also available on stactoverflow so android:configChanges should be used as a last resort according to documentation.
+1. (user13) It's not bad practice to use android:configChanges, but it pretty easily can be, if you don't understand exactly what you're doing
+2. Using this technique prevents you from easily using configuration specific resources. For instance, if you want your layout or drawables or strings or whatever to be different in portrait and landscapes, you have to manage it yourself if you use `android:configChanges`.
+3. You need to override and use `onConfigurationChanged()` method to perform specific action if you decide to use `android:configChanges`
+4. As user13 mentioned Activity is recreated not just due to orientation change but there are multiple reasons due to which activity can be restarted. Therefor activity restart should be handled for all causes. using `android:configChanges` only handles one case and there will be unhandled cases of activity restart which will cause a potential bug.
+5. There are multiple and better ways to handle activity restart and plenty of help is also available on stactoverflow so `android:configChanges` should be used as a last resort according to documentation.
