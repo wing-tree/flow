@@ -1,0 +1,1 @@
+# [Recyclerview onscrolllistener not working when setNestedScrollingEnabled to false](https://stackoverflow.com/questions/38179847/recyclerview-onscrolllistener-not-working-when-setnestedscrollingenabled-to-fals)
